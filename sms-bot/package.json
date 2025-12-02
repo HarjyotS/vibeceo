@@ -39,7 +39,11 @@
 		"fix-single-app": "npm run build && node dist/scripts/fix-single-app.js",
 		"classify-app-types": "npm run build && node dist/scripts/classify-app-types.js",
 		"classify-app-types-sample": "npm run build && node dist/scripts/classify-app-types-sample.js",
-		"builderbot": "node webtoys-os/agents/builder-bot-server/server.js"
+		"builderbot": "node webtoys-os/agents/builder-bot-server/server.js",
+		"test": "vitest run",
+		"test:watch": "vitest watch",
+		"test:ui": "vitest --ui",
+		"test:coverage": "vitest run --coverage"
 	},
 	"dependencies": {
 		"@anthropic-ai/claude-agent-sdk": "^0.1.9",
@@ -78,11 +82,13 @@
 		"@types/luxon": "^3.6.2",
 		"@types/node": "^20.11.0",
 		"@types/node-fetch": "^2.6.11",
+		"@vitest/ui": "^4.0.14",
 		"cheerio": "^1.1.2",
 		"node-fetch": "^3.3.2",
 		"nodemon": "^3.0.1",
 		"rimraf": "^6.0.1",
-		"typescript": "^5.3.3"
+		"typescript": "^5.3.3",
+		"vitest": "^4.0.14"
 	},
 	"author": "",
 	"license": "ISC",
